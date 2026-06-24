@@ -3,11 +3,13 @@ name: Build Downloadable Files
 on:
   push:
     paths:
+      - '.github/workflows/build-artifact.yml'
       - '.vscode/**'
       - 'settings.json'
       - '.editorconfig'
       - '.gitignore'
       - 'custom.d.ts'
+  workflow_dispatch:
 
 jobs:
   package-download:

@@ -15,11 +15,28 @@ jobs:
   package-download:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Create downloadable archive
         run: |
           mkdir -p artifacts
-          tar -czf artifacts/downloadable-files.tar.gz .vscode settings.json .editorconfig .gitignore custom.d.ts
+          files=()
+
+          if [[ -d .vscode ]]; then
+            files+=(.vscode)
+          fi
+
+          for file in settings.json .editorconfig .gitignore custom.d.ts; do
+            if [[ -f "$file" ]]; then
+              files+=("$file")
+            fi
+          done
+
+          if [[ ${#files[@]} -eq 0 ]]; then
+            echo "Erro: nenhum arquivo encontrado para empacotar." >&2
+            exit 1
+          fi
+
+          tar -czf artifacts/downloadable-files.tar.gz "${files[@]}"
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:

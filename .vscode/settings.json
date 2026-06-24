@@ -1,0 +1,153 @@
+{
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	// Melhorias de visualização do editor
+	"editor.guides.bracketPairs": true,
+	"editor.bracketPairColorization.enabled": true, // Adicionado para melhor visualização de pares de colchetes
+	"editor.wordWrap": "on", // Adicionado para melhor visualização de código extenso
+	"editor.formatOnSave": false, // Adicionado para formatação automática ao salvar
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "never"
+	}, // Adiciona correções automáticas ao salvar
+
+	// --- CONFIGURAÇÕES DE AUTO IMPORTAÇÃO (TYPESCRIPT / JAVASCRIPT) ---
+	// Ponto e vírgula: A formatação nativa do JS (js.format.semicolons) foi descontinuada.
+
+ 	"js/ts.format.semicolons": "insert",
+
+  // Aspas: Mantém as aspas simples ativas para os "Auto Imports" e "Quick Fixes" do próprio VS Code,
+  // e adiciona a regra do Prettier para garantir as aspas ao salvar/formatar o código:
+  "js/ts.preferences.quoteStyle": "single",
+
+  // Inlay Hints (Dicas de tipos e parâmetros):
+  // Para que essas três chaves específicas do JavaScript voltem a ser reconhecidas e funcionem,
+  // o controle global de Inlay Hints do editor DEVE estar ativado obrigatoriamente.
+  "editor.inlayHints.enabled": "on",
+  "js/ts.inlayHints.functionLikeReturnTypes.enabled": true,
+  "js/ts.inlayHints.parameterNames.enabled": "literals",
+  "js/ts.inlayHints.variableTypes.enabled": true,
+
+  // Code Lens (Contador de referências acima das funções):
+  // Da mesma forma, o controle global do Code Lens precisa estar ativo
+  // para que as duas configurações do JavaScript funcionem sem apresentar alertas.
+  "editor.codeLens": true,
+  "js/ts.referencesCodeLens.enabled": true,
+  "js/ts.referencesCodeLens.showOnAllFunctions": true,
+
+  // Sugestões de Auto Importação:
+  // Habilita as sugestões de auto importação no menu do IntelliSense (autocomplete).
+  // Quando você digita o nome de uma função/módulo que não foi importado, o VS Code sugere a importação.
+  "js/ts.suggest.autoImports": true,
+
+  // Importações via package.json:
+  // Controla se o VS Code deve vasculhar as dependências listadas no seu `package.json`
+  // para oferecer sugestões de auto importação. O valor "on" força essa busca (o padrão costuma ser "auto").
+  "js/ts.preferences.includePackageJsonAutoImports": "on",
+
+  // Estilo do caminho da importação:
+  // Força o VS Code a usar caminhos relativos (ex: "./utils/format" ou "../../components/Button")
+  // em vez de usar caminhos absolutos ou baseados no baseUrl do projeto quando faz o auto import.
+  "js/ts.preferences.importModuleSpecifier": "relative",
+
+  // Define o Prettier como o formatador padrão para JavaScript,
+  // permitindo que a regra 1 (semicolons) funcione perfeitamente.
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+
+	"js/ts.implicitProjectConfig.checkJs": true,
+	"files.encoding": "iso88591",
+	"[jsonl]": {
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"files.encoding": "utf8"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"files.encoding": "utf8"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features",
+		"files.encoding": "utf8"
+	},
+	"[php]": {
+		"editor.formatOnSave": true, // Ativa formatação automática APENAS para PHP
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client" // Define Intelephense como formatador padrão
+	},
+	"[python]": {
+		"files.encoding": "utf8"
+	},
+	"[markdown]": {
+		"files.encoding": "utf8"
+	},
+
+	// Configurações de validação e formatação PHP
+	"php.validate.enable": true, // Adicionado para validação de sintaxe PHP
+	"php.suggest.basic": true, // Adicionado para melhorar sugestões de código
+	"intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
+	"intelephense.diagnostics.undefinedClassConstants": false,
+	"intelephense.diagnostics.undefinedConstants": false,
+	"intelephense.diagnostics.undefinedFunctions": false,
+	"intelephense.diagnostics.undefinedMethods": false,
+	"intelephense.diagnostics.undefinedProperties": true, // Alterado para true para detectar propriedades inexistentes
+	"intelephense.diagnostics.undefinedTypes": false,
+	"intelephense.environment.documentRoot": "/var/www/sgs/src",
+	"intelephense.environment.phpVersion": "8.2",
+	"intelephense.format.braces": "k&r",
+	"intelephense.phpdoc.textFormat": "text",
+	"intelephense.phpdoc.useFullyQualifiedNames": true,
+	"intelephense.rename.exclude": [
+		"**/vendor/**",
+		"*.js.php"
+	],
+	// Configurações LESS
+	"less.compile": {
+		"compress": true,
+		"autoprefixer": "last 5 Firefox versions, > 5%, last 4 versions",
+		"ieCompat": false
+	},
+	"less.format.spaceAroundSelectorSeparator": true,
+	"less.lint.duplicateProperties": "warning",
+	// Gerenciamento de arquivos
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true, // Adicionado para consistência de arquivos
+	"files.exclude": {
+		"**/node_modules": true,
+		"**/vendor": true,
+		"**/.git": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"**/.~lock.*#": true // Adicionado para excluir os padrões .~lock.*# e */.~lock.*#
+	},
+	"files.watcherExclude": {
+		"**/node_modules/**": true,
+		"**/vendor/**": true,
+		"**/.git/**": true
+	},
+	// Git e controle de versão
+	"git.autofetch": true,
+	"git.confirmSync": false,
+	"git.enableSmartCommit": true,
+	"diffEditor.ignoreTrimWhitespace": true,
+	"peacock.remoteColor": "#156415",
+	"workbench.colorCustomizations": {
+		"activityBar.activeBackground": "#1e8e1e",
+		"activityBar.background": "#1e8e1e",
+		"activityBar.foreground": "#e7e7e7",
+		"activityBar.inactiveForeground": "#e7e7e799",
+		"activityBarBadge.background": "#2c2cd3",
+		"activityBarBadge.foreground": "#e7e7e7",
+		"commandCenter.border": "#e7e7e799",
+		"sash.hoverBorder": "#1e8e1e",
+		"statusBar.background": "#156415",
+		"statusBar.foreground": "#e7e7e7",
+		"statusBarItem.hoverBackground": "#1e8e1e",
+		"statusBarItem.remoteBackground": "#156415",
+		"statusBarItem.remoteForeground": "#e7e7e7",
+		"titleBar.activeBackground": "#156415",
+		"titleBar.activeForeground": "#e7e7e7",
+		"titleBar.inactiveBackground": "#15641599",
+		"titleBar.inactiveForeground": "#e7e7e799"
+	},
+}

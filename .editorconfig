@@ -1,0 +1,37 @@
+# https://editorconfig.org/
+
+root = true
+
+# Default file settings
+[*]
+indent_style = tab
+indent_size = 2
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+charset = iso-8859-1
+
+# Markdown files
+[*.md]
+indent_style = space
+trim_trailing_whitespace = false
+
+
+[*.{json,jsonl,jsonc,py,md}]
+charset = utf-8
+
+[*.php]
+indent_style = tab
+php_version = 8.2
+brace_style = k&r
+
+[*.js]
+quote_type = single
+insert_semicolons = true
+
+[*.less]
+space_around_selector_separator = true
+compress = true
+autoprefixer = last 5 Firefox versions, > 5%, last 4 versions
+ie_compat = false
+duplicate_properties = warning

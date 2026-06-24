@@ -47,12 +47,7 @@ archive_root="${REPO_NAME}-${BRANCH}"
 
 echo "Extraindo arquivos..."
 
-tar -xzf "$tmpdir/repo.tar.gz" -C "$tmpdir" \
-  "$archive_root/.vscode" \
-  "$archive_root/settings.json" \
-  "$archive_root/.editorconfig" \
-  "$archive_root/.gitignore" \
-  "$archive_root/custom.d.ts"
+tar -xzf "$tmpdir/repo.tar.gz" -C "$tmpdir"
 
 if [[ -d "$tmpdir/$archive_root/.vscode" ]]; then
   rm -rf .vscode
@@ -64,9 +59,3 @@ for file in settings.json .editorconfig .gitignore custom.d.ts; do
   if [[ -f "$tmpdir/$archive_root/$file" ]]; then
     cp "$tmpdir/$archive_root/$file" .
     echo "Atualizado $file"
-  else
-    echo "Aviso: $file não existe no repositório remoto." >&2
-  fi
- done
-
-echo "? Atualização concluída com sucesso."

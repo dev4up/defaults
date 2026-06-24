@@ -167,12 +167,12 @@ dev4up/defaults (Repositório Central)
 
 ## Vantagens
 
-✅ **Centralizado**: Uma única fonte de verdade para configurações  
-✅ **Automatizado**: GitHub Actions gera artefatos automaticamente  
-✅ **Simples**: Um comando curl para sincronizar  
-✅ **Flexível**: Suporta diferentes branches e repositórios  
-✅ **Confiável**: Apenas sobrescreve se o arquivo existe  
-✅ **Rastreável**: Histórico no Git e logs de atualização  
+✅ **Centralizado**: Uma única fonte de verdade para configurações
+✅ **Automatizado**: GitHub Actions gera artefatos automaticamente
+✅ **Simples**: Um comando curl para sincronizar
+✅ **Flexível**: Suporta diferentes branches e repositórios
+✅ **Confiável**: Apenas sobrescreve se o arquivo existe
+✅ **Rastreável**: Histórico no Git e logs de atualização
 
 ## Requisitos
 

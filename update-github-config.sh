@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Defaults Configuration Update Script
+# Downloads and syncs default configuration files from dev4up/defaults repository
 set -euo pipefail
 
 show_help() {

@@ -59,3 +59,7 @@ for file in settings.json .editorconfig .gitignore custom.d.ts; do
   if [[ -f "$tmpdir/$archive_root/$file" ]]; then
     cp "$tmpdir/$archive_root/$file" .
     echo "Atualizado $file"
+  fi
+done
+
+echo "? Atualização concluída com sucesso."

@@ -29,26 +29,8 @@ if [[ ! -d .git ]]; then
 fi
 
 BRANCH="${BRANCH:-main}"
-
-if ! repo_url=$(git remote get-url origin 2>/dev/null); then
-  echo "Erro: não foi possível obter o remote 'origin'." >&2
-  exit 1
-fi
-
-# Normalize GitHub remote URL
-if [[ "$repo_url" =~ ^git@github.com:(.+)/(.+)\.git$ ]]; then
-  REPO_USER="${BASH_REMATCH[1]}"
-  REPO_NAME="${BASH_REMATCH[2]}"
-elif [[ "$repo_url" =~ ^https://github.com/(.+)/(.+)\.git$ ]]; then
-  REPO_USER="${BASH_REMATCH[1]}"
-  REPO_NAME="${BASH_REMATCH[2]}"
-elif [[ "$repo_url" =~ ^https://github.com/(.+)/(.+)$ ]]; then
-  REPO_USER="${BASH_REMATCH[1]}"
-  REPO_NAME="${BASH_REMATCH[2]}"
-else
-  echo "Erro: remote origin não parece ser um repositório GitHub válido." >&2
-  exit 1
-fi
+REPO_USER="${REPO_USER:-dev4up}"
+REPO_NAME="${REPO_NAME:-defaults}"
 
 ARCHIVE_URL="https://github.com/${REPO_USER}/${REPO_NAME}/archive/refs/heads/${BRANCH}.tar.gz"
 

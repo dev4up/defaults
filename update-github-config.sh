@@ -87,4 +87,4 @@ for file in settings.json .editorconfig .gitignore custom.d.ts; do
   fi
  done
 
-echo "Atualização concluída."
+echo "? Atualização concluída com sucesso."

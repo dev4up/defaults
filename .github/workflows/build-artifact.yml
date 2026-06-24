@@ -1,0 +1,25 @@
+name: Build Downloadable Files
+
+on:
+  push:
+    paths:
+      - '.vscode/**'
+      - 'settings.json'
+      - '.editorconfig'
+      - '.gitignore'
+      - 'custom.d.ts'
+
+jobs:
+  package-download:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create downloadable archive
+        run: |
+          mkdir -p artifacts
+          tar -czf artifacts/downloadable-files.tar.gz .vscode settings.json .editorconfig .gitignore custom.d.ts
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: downloadable-files
+          path: artifacts/downloadable-files.tar.gz

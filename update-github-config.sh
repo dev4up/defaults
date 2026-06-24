@@ -64,4 +64,11 @@ for file in settings.json .editorconfig .gitignore custom.d.ts; do
   fi
 done
 
+echo "Lembre de instalar as extensões:"
+
+echo "PHP Intelephense"
+echo "Bookmarks"
+echo "Easy LESS"
+echo "ErrorLens"
+
 echo "? Atualização concluída com sucesso."

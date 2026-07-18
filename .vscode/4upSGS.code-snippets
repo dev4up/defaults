@@ -1,0 +1,87 @@
+{
+	"Classe 4UP": {
+		"scope": "javascript,typescript",
+		"prefix": "class",
+		"body": [
+			"class ${1:NomeClasse} {",
+			"\tconstructor() {",
+			"\t\t$0",
+			"\t}",
+			"}"
+		],
+		"description": "Classe 4UP"
+	},
+	"ConexaoSOAP": {
+		"scope": "javascript,typescript",
+		"prefix": "soap",
+		"description": "Cria uma conexão SOAP e obtém o objeto de retorno",
+		"body": [
+			"const ${1:conexao} = new ConexaoSOAP(_vtela.soap, ${2:metodo});",
+			"${1:conexao}.addParametro(${3:nome}, ${4:valor});",
+			"const ${5:dados} = ${1:conexao}.getObjeto();"
+		]
+	},
+	"Ícone simples": {
+		"scope": "javascript,typescript",
+		"prefix": "icone",
+		"description": "Icone.getIcone() simples",
+		"body": [
+			"Icone.getIcone(\"${1:iconName}\", {",
+			"\t${2:style}: ${3:'float:left'}",
+			"})$0"
+		]
+	},
+	"Ícone completo": {
+		"scope": "javascript,typescript",
+		"prefix": "iconef",
+		"description": "Icone.getIcone() completo",
+		"body": [
+			"Icone.getIcone(\"${1:iconName}\", {",
+			"\ttitle: \"${2:Título}\",",
+			"\tonclick: () => ${3:this.destroy()},",
+			"\tstyle: \"${4:float:right}\",",
+			"})$0"
+		]
+	},
+	"Funcao PHP": {
+		"scope": "php",
+		"prefix": "func",
+		"body": [
+			"function ${1:nome}(${2:$param}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "Função PHP"
+	},
+	"ADODB conexão": {
+		"scope": "php",
+		"prefix": "db",
+		"description": "Inicializa a conexão global do ADODB e define o modo de retorno associativo",
+		"body": [
+			"global $DB;",
+			"$DB->SetFetchMode(ADODB_FETCH_ASSOC);",
+			"$0"
+		]
+	},
+	"Novo Relatório": {
+		"scope": "sql",
+		"prefix": "relatorio",
+		"description": "Cria um novo relatório no sistema",
+		"body": [
+			"INSERT INTO `trelatorio`",
+			"(`codrelatorio`, `nomerelatorio`, `descricao`, `autor`, `local`, `unidade`, `tipo`, `relatorio`, `saida`, `programavel`)",
+			"SELECT ${1:codRelatorio},",
+			"       '${2:prefixo}:${3:nomeRelatorio}',",
+			"       ${4:descricao},",
+			"       ${5:autor},",
+			"       'db',",
+			"       14,",
+			"       'interativo',",
+			"       '${6:arquivoRelatorio}',",
+			"       'file',",
+			"       0",
+			"FROM tempresa",
+			"ORDER BY codobjeto DESC;$0"
+		]
+	}
+}

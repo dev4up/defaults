@@ -9,6 +9,7 @@ on:
       - '.editorconfig'
       - '.gitignore'
       - 'custom.d.ts'
+      - 'jsconfig.json'
   workflow_dispatch:
 
 jobs:

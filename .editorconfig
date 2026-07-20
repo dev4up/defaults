@@ -35,3 +35,11 @@ compress = true
 autoprefixer = last 5 Firefox versions, > 5%, last 4 versions
 ie_compat = false
 duplicate_properties = warning
+
+[*.{yml,yaml}]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2

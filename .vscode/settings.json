@@ -11,52 +11,42 @@
 	"editor.codeActionsOnSave": {
 		"source.fixAll": "never"
 	}, // Adiciona correções automáticas ao salvar
-
 	// --- CONFIGURAÇÕES DE AUTO IMPORTAÇÃO (TYPESCRIPT / JAVASCRIPT) ---
 	// Ponto e vírgula: A formatação nativa do JS (js.format.semicolons) foi descontinuada.
-
- 	"js/ts.format.semicolons": "insert",
-
-  // Aspas: Mantém as aspas simples ativas para os "Auto Imports" e "Quick Fixes" do próprio VS Code,
-  // e adiciona a regra do Prettier para garantir as aspas ao salvar/formatar o código:
-  "js/ts.preferences.quoteStyle": "single",
-
-  // Inlay Hints (Dicas de tipos e parâmetros):
-  // Para que essas três chaves específicas do JavaScript voltem a ser reconhecidas e funcionem,
-  // o controle global de Inlay Hints do editor DEVE estar ativado obrigatoriamente.
-  "editor.inlayHints.enabled": "on",
-  "js/ts.inlayHints.functionLikeReturnTypes.enabled": true,
-  "js/ts.inlayHints.parameterNames.enabled": "literals",
-  "js/ts.inlayHints.variableTypes.enabled": true,
-
-  // Code Lens (Contador de referências acima das funções):
-  // Da mesma forma, o controle global do Code Lens precisa estar ativo
-  // para que as duas configurações do JavaScript funcionem sem apresentar alertas.
-  "editor.codeLens": true,
-  "js/ts.referencesCodeLens.enabled": true,
-  "js/ts.referencesCodeLens.showOnAllFunctions": true,
-
-  // Sugestões de Auto Importação:
-  // Habilita as sugestões de auto importação no menu do IntelliSense (autocomplete).
-  // Quando você digita o nome de uma função/módulo que não foi importado, o VS Code sugere a importação.
-  "js/ts.suggest.autoImports": true,
-
-  // Importações via package.json:
-  // Controla se o VS Code deve vasculhar as dependências listadas no seu `package.json`
-  // para oferecer sugestões de auto importação. O valor "on" força essa busca (o padrão costuma ser "auto").
-  "js/ts.preferences.includePackageJsonAutoImports": "on",
-
-  // Estilo do caminho da importação:
-  // Força o VS Code a usar caminhos relativos (ex: "./utils/format" ou "../../components/Button")
-  // em vez de usar caminhos absolutos ou baseados no baseUrl do projeto quando faz o auto import.
-  "js/ts.preferences.importModuleSpecifier": "relative",
-
-  // Define o Prettier como o formatador padrão para JavaScript,
-  // permitindo que a regra 1 (semicolons) funcione perfeitamente.
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-
+	"js/ts.format.semicolons": "insert",
+	// Aspas: Mantém as aspas simples ativas para os "Auto Imports" e "Quick Fixes" do próprio VS Code,
+	// e adiciona a regra do Prettier para garantir as aspas ao salvar/formatar o código:
+	"js/ts.preferences.quoteStyle": "single",
+	// Inlay Hints (Dicas de tipos e parâmetros):
+	// Para que essas três chaves específicas do JavaScript voltem a ser reconhecidas e funcionem,
+	// o controle global de Inlay Hints do editor DEVE estar ativado obrigatoriamente.
+	"editor.inlayHints.enabled": "on",
+	"js/ts.inlayHints.functionLikeReturnTypes.enabled": true,
+	"js/ts.inlayHints.parameterNames.enabled": "literals",
+	"js/ts.inlayHints.variableTypes.enabled": true,
+	// Code Lens (Contador de referências acima das funções):
+	// Da mesma forma, o controle global do Code Lens precisa estar ativo
+	// para que as duas configurações do JavaScript funcionem sem apresentar alertas.
+	"editor.codeLens": true,
+	"js/ts.referencesCodeLens.enabled": true,
+	"js/ts.referencesCodeLens.showOnAllFunctions": true,
+	// Sugestões de Auto Importação:
+	// Habilita as sugestões de auto importação no menu do IntelliSense (autocomplete).
+	// Quando você digita o nome de uma função/módulo que não foi importado, o VS Code sugere a importação.
+	"js/ts.suggest.autoImports": true,
+	// Importações via package.json:
+	// Controla se o VS Code deve vasculhar as dependências listadas no seu `package.json`
+	// para oferecer sugestões de auto importação. O valor "on" força essa busca (o padrão costuma ser "auto").
+	"js/ts.preferences.includePackageJsonAutoImports": "on",
+	// Estilo do caminho da importação:
+	// Força o VS Code a usar caminhos relativos (ex: "./utils/format" ou "../../components/Button")
+	// em vez de usar caminhos absolutos ou baseados no baseUrl do projeto quando faz o auto import.
+	"js/ts.preferences.importModuleSpecifier": "relative",
+	// Define o Prettier como o formatador padrão para JavaScript,
+	// permitindo que a regra 1 (semicolons) funcione perfeitamente.
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
 	"js/ts.implicitProjectConfig.checkJs": true,
 	"files.encoding": "iso88591",
 	"[jsonl]": {
@@ -84,7 +74,14 @@
 	"[markdown]": {
 		"files.encoding": "utf8"
 	},
-
+	"[yaml]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"files.encoding": "utf8",
+		"files.eol": "\n",
+		"files.insertFinalNewline": true,
+		"files.trimTrailingWhitespace": true,
+	},
 	// Configurações de validação e formatação PHP
 	"php.validate.enable": true, // Adicionado para validação de sintaxe PHP
 	"php.suggest.basic": true, // Adicionado para melhorar sugestões de código

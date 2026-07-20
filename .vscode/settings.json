@@ -151,4 +151,112 @@
 		"titleBar.inactiveBackground": "#15641599",
 		"titleBar.inactiveForeground": "#e7e7e799"
 	},
+		"todo-tree.ripgrep.ripgrep":"/usr/bin/rg",
+
+	"todo-tree.general.tags": [
+		"TODO",
+		"FIX",
+		"FIXIT",
+		"BUG",
+		"HACK",
+		"NOTE",
+		"OPTIMIZE",
+		"PERF",
+		"REVIEW",
+		"XXX",
+		"WARNING",
+		"DEPRECATED"
+	],
+
+	"todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|\\*)\\s*(@)?($TAGS)\\b[:]?",
+	"todo-tree.regex.regexCaseSensitive": false,
+
+	"todo-tree.highlights.enabled": true,
+
+	"todo-tree.highlights.customHighlight": {
+		"TODO": {
+			"foreground": "#000000",
+			"background": "#FF9800",
+			"icon": "check",
+			"iconColour": "#FF9800",
+			"type": "text-and-comment"
+		},
+		"FIX": {
+			"foreground": "#FFFFFF",
+			"background": "#D32F2F",
+			"icon": "flame",
+			"iconColour": "#D32F2F",
+			"type": "text-and-comment"
+		},
+		"FIXIT": {
+			"foreground": "#FFFFFF",
+			"background": "#B71C1C",
+			"icon": "alert",
+			"iconColour": "#B71C1C",
+			"type": "text-and-comment"
+		},
+		"BUG": {
+			"foreground": "#FFFFFF",
+			"background": "#C62828",
+			"icon": "bug",
+			"iconColour": "#C62828",
+			"type": "text-and-comment"
+		},
+		"HACK": {
+			"foreground": "#000000",
+			"background": "#FBC02D",
+			"icon": "tools",
+			"iconColour": "#FBC02D",
+			"type": "text-and-comment"
+		},
+		"NOTE": {
+			"foreground": "#FFFFFF",
+			"background": "#1976D2",
+			"icon": "note",
+			"iconColour": "#1976D2",
+			"type": "text-and-comment"
+		},
+		"OPTIMIZE": {
+			"foreground": "#FFFFFF",
+			"background": "#2E7D32",
+			"icon": "rocket",
+			"iconColour": "#2E7D32",
+			"type": "text-and-comment"
+		},
+		"PERF": {
+			"foreground": "#FFFFFF",
+			"background": "#388E3C",
+			"icon": "dashboard",
+			"iconColour": "#388E3C",
+			"type": "text-and-comment"
+		},
+		"REVIEW": {
+			"foreground": "#000000",
+			"background": "#7E57C2",
+			"icon": "eye",
+			"iconColour": "#7E57C2",
+			"type": "text-and-comment"
+		},
+		"XXX": {
+			"foreground": "#FFFFFF",
+			"background": "#6A1B9A",
+			"icon": "x",
+			"iconColour": "#6A1B9A",
+			"type": "text-and-comment"
+		},
+		"WARNING": {
+			"foreground": "#000000",
+			"background": "#FFC107",
+			"icon": "alert",
+			"iconColour": "#FFC107",
+			"type": "text-and-comment"
+		},
+		"DEPRECATED": {
+			"foreground": "#FFFFFF",
+			"background": "#616161",
+			"icon": "circle-slash",
+			"iconColour": "#616161",
+			"type": "text-and-comment"
+		}
+	}
 }

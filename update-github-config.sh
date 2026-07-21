@@ -13,6 +13,7 @@ This script updates the current working directory with the following files from 
   - .editorconfig
   - .gitignore
   - custom.d.ts
+	- jsconfig.json
 
 It requires that the current directory contains a valid .git repository.
 
@@ -26,7 +27,7 @@ if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
 fi
 
 if [[ ! -d .git ]]; then
-  echo "Erro: diretório .git não encontrado neste caminho. Execute o script dentro do repositório git." >&2
+  echo "Erro: diretï¿½rio .git nï¿½o encontrado neste caminho. Execute o script dentro do repositï¿½rio git." >&2
   exit 1
 fi
 
@@ -57,18 +58,18 @@ if [[ -d "$tmpdir/$archive_root/.vscode" ]]; then
   echo "Atualizado .vscode/"
 fi
 
-for file in settings.json .editorconfig .gitignore custom.d.ts; do
+for file in settings.json .editorconfig .gitignore custom.d.ts jsconfig.json; do
   if [[ -f "$tmpdir/$archive_root/$file" ]]; then
     cp "$tmpdir/$archive_root/$file" .
     echo "Atualizado $file"
   fi
 done
 
-echo "Lembre de instalar as extensões:"
+echo "Lembre de instalar as extensï¿½es:"
 
 echo "PHP Intelephense"
 echo "Bookmarks"
 echo "Easy LESS"
 echo "ErrorLens"
 
-echo "? Atualização concluída com sucesso."
+echo "? Atualizaï¿½ï¿½o concluï¿½da com sucesso."

@@ -26,7 +26,7 @@ jobs:
             files+=(.vscode)
           fi
 
-          for file in settings.json .editorconfig .gitignore custom.d.ts; do
+          for file in settings.json .editorconfig .gitignore custom.d.ts jsconfig.json; do
             if [[ -f "$file" ]]; then
               files+=("$file")
             fi

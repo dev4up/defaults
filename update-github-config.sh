@@ -27,7 +27,7 @@ if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
 fi
 
 if [[ ! -d .git ]]; then
-  echo "Erro: diret�rio .git n�o encontrado neste caminho. Execute o script dentro do reposit�rio git." >&2
+  echo "Erro: diret�rio .git não encontrado neste caminho. Execute o script dentro do reposit�rio git." >&2
   exit 1
 fi
 
@@ -62,6 +62,8 @@ for file in settings.json .editorconfig .gitignore custom.d.ts jsconfig.json; do
   if [[ -f "$tmpdir/$archive_root/$file" ]]; then
     cp "$tmpdir/$archive_root/$file" .
     echo "Atualizado $file"
+	else
+		echo "Não localizado o $file"
   fi
 done
 

@@ -101,6 +101,14 @@
 		"**/vendor/**",
 		"*.js.php"
 	],
+	"emeraldwalk.runonsave": {
+		"commands": [
+			{
+				"match": "\\.php$",
+				"cmd": "/etc/init.d/php8.2-fpm reload"
+			}
+		]
+	},
 	// Configurações LESS
 	"less.compile": {
 		"compress": true,

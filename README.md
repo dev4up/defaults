@@ -7,7 +7,8 @@ Este projeto inclui um script e um workflow para atualizar arquivos de configura
 O script baixa e atualiza os seguintes itens no diretório atual:
 
 - `.vscode/`
-- `settings.json`
+	- `settings.json`
+	- `4upSGS.code-snippets`
 - `.editorconfig`
 - `.gitignore`
 - `custom.d.ts`
@@ -17,7 +18,8 @@ O script baixa e atualiza os seguintes itens no diretório atual:
 Um workflow GitHub Actions (`.github/workflows/build-artifact.yml`) é executado sempre que há mudanças em um dos arquivos listados acima. Ele gera um artefato de download chamado `downloadable-files` contendo os arquivos:
 
 - `.vscode/`
-- `settings.json`
+	- `settings.json`
+	- `4upSGS.code-snippets`
 - `.editorconfig`
 - `.gitignore`
 - `custom.d.ts`

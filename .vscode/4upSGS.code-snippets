@@ -1,5 +1,122 @@
 {
-	"Classe 4UP": {
+  "Alert Info": {
+    "prefix": "alt-info",
+    "body": [
+      "await Alert.info(\"${1:Mensagem informacional}\"${2:, { titulo: \"${3:Informe}\" }});"
+    ],
+    "description": "Exibe um alerta de informação padrão com a classe Alert"
+  },
+  "Alert Erro": {
+    "prefix": "alt-erro",
+    "body": [
+      "await Alert.erro(\"${1:Ocorreu um erro ao processar a solicitação.}\"${2:, { titulo: \"${3:Erro}\" }});"
+    ],
+    "description": "Exibe um alerta de erro estilizado com a classe Alert"
+  },
+  "Alert Confirm (Async/Await)": {
+    "prefix": "alt-confirm",
+    "body": [
+      "const ${1:confirmado} = await Alert.confirm(\"${2:Deseja realmente prosseguir?}\", {",
+      "  titulo: \"${3:Confirmar}\",",
+      "  swal: {",
+      "    confirmButtonText: \"${4:Sim}\",",
+      "    cancelButtonText: \"${5:Não}\"",
+      "  }",
+      "});",
+      "",
+      "if (${1:confirmado}) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Exibe caixa de confirmação assíncrona que retorna um booleano"
+  },
+  "Alert Prompt (Async/Await)": {
+    "prefix": "alt-prompt",
+    "body": [
+      "const ${1:resposta} = await Alert.prompt(\"${2:Por favor, informe os dados abaixo:}\", {",
+      "  titulo: \"${3:Informe um valor}\",",
+      "  swal: {",
+      "    inputPlaceholder: \"${4:Digite aqui...}\",",
+      "    inputValue: \"${5:}\"",
+      "  }",
+      "});",
+      "",
+      "if (${1:resposta}) {",
+      "  $0",
+      "}"
+    ],
+    "description": "Exibe modal com campo de input e captura o valor inserido"
+  },
+  "Alert Customizado (Exibe)": {
+    "prefix": "alt-exibe",
+    "body": [
+      "Alert.exibe({",
+      "  titulo: \"${1:Título}\",",
+      "  conteudo: \"${2:Conteúdo personalizado}\",",
+      "  icone: \"${3|info,error,help,warning|}\",",
+      "  swal: {",
+      "    confirmButtonText: \"${4:OK}\"",
+      "  }",
+      "});"
+    ],
+    "description": "Gera uma chamada genérica customizada para Alert.exibe()"
+  },
+
+  "Classe 4UP - Padrão": {
+    "scope": "javascript,typescript",
+    "prefix": "class",
+    "body": [
+      "/**",
+      " * ${1:Descrição da classe ${2:${TM_FILENAME_BASE}}.}",
+      " */",
+      "class ${2:${TM_FILENAME_BASE}} {",
+      "  /**",
+      "   * @param {${3:Object}} ${4:opcoes}",
+      "   */",
+      "  constructor(${4:opcoes} = {}) {",
+      "    $0",
+      "  }",
+      "}"
+    ],
+    "description": "Cria uma classe com JSDoc e nome derivado automaticamente do arquivo."
+  },
+  "Classe 4UP <- Herança (Extends)": {
+    "scope": "javascript,typescript",
+    "prefix": "class",
+    "body": [
+      "/**",
+      " * ${1:Descrição da classe.}",
+      " */",
+      "class ${2:${TM_FILENAME_BASE}} extends ${3:ClassePai} {",
+      "  /**",
+      "   * @param {${4:Object}} ${5:opcoes}",
+      "   */",
+      "  constructor(${5:opcoes} = {}) {",
+      "    super(${5:opcoes});",
+      "    $0",
+      "  }",
+      "}"
+    ],
+    "description": "Cria classe com herança de classe pai e chamada super() no construtor."
+  },
+  "Classe 4UP . Estática / Service": {
+    "scope": "javascript,typescript",
+    "prefix": "class",
+    "body": [
+      "/**",
+      " * ${1:Classe utilitária ${2:${TM_FILENAME_BASE}}.}",
+      " */",
+      "class ${2:${TM_FILENAME_BASE}} {",
+      "  static ${3:executar}(${4:conteudo} = \"\", ${5:opcoes} = {}) {",
+      "    $0",
+      "  }",
+      "}"
+    ],
+    "description": "Cria classe com métodos estáticos (estilo utilitário/Service sem construtor)."
+  },
+
+
+	"Classe 4UP - Simples": {
 		"scope": "javascript,typescript",
 		"prefix": "class",
 		"body": [

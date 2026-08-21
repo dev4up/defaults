@@ -104,3 +104,11 @@ interface HTMLElement {
 	show():void;
 	showModal():void;
 }
+
+declare class Alert {
+static info(conteudo:string="", opcoes:object = {})
+static erro(conteudo:string="", opcoes:object = {})
+static confirm(conteudo:string="", opcoes:object = {})
+static prompt(conteudo:string="", opcoes:object = {})
+static exibe(opcoes:object)
+}

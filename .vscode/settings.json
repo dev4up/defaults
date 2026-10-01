@@ -185,7 +185,7 @@
 		"TODO": {
 			"foreground": "#000000",
 			"background": "#FF9800",
-			"icon": "check",
+			"icon": "primitive-square",
 			"iconColour": "#FF9800",
 			"type": "text-and-comment"
 		},
@@ -199,7 +199,7 @@
 		"FIXIT": {
 			"foreground": "#FFFFFF",
 			"background": "#B71C1C",
-			"icon": "alert",
+			"icon": "important",
 			"iconColour": "#B71C1C",
 			"type": "text-and-comment"
 		},
@@ -213,7 +213,7 @@
 		"HACK": {
 			"foreground": "#000000",
 			"background": "#FBC02D",
-			"icon": "tools",
+			"icon": "debug-coverage",
 			"iconColour": "#FBC02D",
 			"type": "text-and-comment"
 		},
@@ -243,13 +243,6 @@
 			"background": "#7E57C2",
 			"icon": "eye",
 			"iconColour": "#7E57C2",
-			"type": "text-and-comment"
-		},
-		"XXX": {
-			"foreground": "#FFFFFF",
-			"background": "#6A1B9A",
-			"icon": "x",
-			"iconColour": "#6A1B9A",
 			"type": "text-and-comment"
 		},
 		"WARNING": {

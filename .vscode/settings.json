@@ -213,7 +213,7 @@
 		"HACK": {
 			"foreground": "#000000",
 			"background": "#FBC02D",
-			"icon": "developer-tools",
+			"icon": "tools",
 			"iconColour": "#FBC02D",
 			"type": "text-and-comment"
 		},
